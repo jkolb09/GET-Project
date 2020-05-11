@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+    p.solid {border-style: solid;}
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+    
+}
+    div {
+  background-color: lightgrey;
+  width: 150px;
+  border: 5px solid red;
+  padding: 20px;
+  margin: 20px;
+}
+    
+</style>
+       <h1>Get Project by Jacob Kolb</h1>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script>
+        $(document).ready(function() {
+         $("button").click(function)) {
+             $.get("cd_catalog.xml", function(data, status) {
+               $("#cd_catalog").html(data);
+                 alert(status);
+                 
+             })
+         }) 
+        });
+        </script>
+    </head>
+    <body>
+       <p class="solid"></p>
+        <div> <button>Click me to get data!</button></div>
+        <p id="cd_catalog">
+            
+        </p>
+    </body>
+</html>
